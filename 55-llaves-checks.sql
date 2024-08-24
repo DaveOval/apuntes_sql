@@ -2,7 +2,7 @@
 
 -- 1. Crear una llave primaria en city (id)
 
-
+CREATE PRIMAY KEY 
 -- 2. Crear un check en population, para que no soporte negativos
 
 
