@@ -44,6 +44,19 @@ ON a.continent = b.code
 WHERE a.continent IS NULL;
 
 
-SELECT count(*), continent from country
-group by continent
-ORDER by continent asc;
+SELECT count(*), b.name from country a
+INNER JOIN continent b
+on a.continent = b.code
+group by b.name
+ORDER by count(*) ASC;
+
+-- Count Union - Tarea
+-- Total |  Continent
+-- 5	  | Antarctica
+-- 28	  | Oceania
+-- 46	  | Europe
+-- 51	  | America
+-- 51	  | Asia
+-- 58	  | Africa
+
+SELECT *
